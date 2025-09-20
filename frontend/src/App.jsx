@@ -11,7 +11,7 @@ function App() {
         path="/": 메인 페이지
         element={<SignUp />}: 해당 경로에서 보여줄 컴포넌트
         */}
-        <Route path="/" element={<SignUp />} />
+        <Route path="/auth/signup" element={<SignUp />} />
         {/* <Route path="/signup" element={<SignUp />} /> */}
       </Routes>
     </Router>
