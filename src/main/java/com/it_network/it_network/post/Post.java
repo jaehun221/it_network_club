@@ -1,18 +1,27 @@
 package com.it_network.it_network.post;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.it_network.it_network.comment.Comment;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.awt.image.ImageProducer;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "post_tbl")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    private Integer id; // 게시물 일련번호
+    private Long id; // 게시물 일련번호
 
     @Column(nullable = false)
     private Integer member_id; // 회원 일련번호
@@ -43,5 +52,10 @@ public class Post {
     @UpdateTimestamp
     @Column()
     private LocalDateTime upd_date; // 수정일
+
+    @OneToMany(mappedBy = "post", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JsonManagedReference("post-comments")
+    @OrderBy("id asc")
+    private List<Comment> comments;
 }
 
