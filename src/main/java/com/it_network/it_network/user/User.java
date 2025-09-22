@@ -1,21 +1,22 @@
 package com.it_network.it_network.user;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.it_network.it_network.comment.Comment;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table(name = "member_tbl")
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User implements UserDetails {
 
@@ -60,4 +61,9 @@ public class User implements UserDetails {
     public String getPassword() {
         return user_pw;
     }
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference("user-comments")
+    private List<Comment> comments = new ArrayList<>();
+
 }
