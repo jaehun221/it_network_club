@@ -5,14 +5,12 @@ it network club homepage development project
 
 ### 역할
 backend  
-
 로그인/회원가입 : 이재훈  
 게시글 CRUD : 강지원  
 댓글/대댓글 : 박영민  
-
+  
 
 frontend  
-
 유민형,이원준,장준,정현우
 
 ## 기술스택
@@ -22,3 +20,6 @@ Spring Security
 MariaDB  
 React  
 
+
+Spring Security 사용해 세션기반 로그인 인증 구현  
+-> JWT 토큰 기반으로 변경 예정
