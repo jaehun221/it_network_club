@@ -1,0 +1,20 @@
+{
+  "name": "it_network_club",
+  "version": "1.0.0",
+  "description": "it network club homepage development project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaehun221/it_network_club.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaehun221/it_network_club/issues"
+  },
+  "homepage": "https://github.com/jaehun221/it_network_club#readme"
+}

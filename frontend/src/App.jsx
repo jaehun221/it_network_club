@@ -1,5 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SignUp from "./SignUp";
+import MainPage from "./MainPage";
+
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
         path="/": 메인 페이지
         element={<SignUp />}: 해당 경로에서 보여줄 컴포넌트
         */}
+        <Route path="/" element={<Navigate to="/auth/signup" />} />
         <Route path="/auth/signup" element={<SignUp />} />
+        <Route path="/MainPage" element={<MainPage />} />
         {/* <Route path="/signup" element={<SignUp />} /> */}
       </Routes>
     </Router>

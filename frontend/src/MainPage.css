@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    min-height: 100vh; 
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(29, 25, 66);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;       
+  padding-right: 16px;
+  z-index: 1000;
+}
+
+.aws_logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+.aws_logo img {
+    height: 70px;
+}
+
+.account_logo {
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 30px;
+}
+
+.account {
+  position: relative; /* 드롭다운 기준 */
+  display: inline-block;
+}
+
+.account-menu {
+    display: none;
+    position: absolute;
+    top: 100%;   /* 아이콘 바로 밑 */
+    right: 0;
+    background-color: rgb(241, 241, 241);
+    min-width: 120px;
+    border-radius: 6px;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    color: black;
+}
+
+.account-menu a {
+    display: block;
+    padding: 10px;
+    color: black !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+.account-menu a:hover {
+    background-color: #a1a1a1;
+}
+
+.account:hover .account-menu {
+    display: block;
+}
+
+
+.nav ul {
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    list-style: none;
+    color: white;
+}
+
+a:link { color: white; }
+a:visited { color:white; }
+a:hover { color:rgb(201, 201, 201); }
+a:active { color:rgb(175, 175, 175); }
+
+.main {
+    width: 100%;
+    width: 100%;
+	height: 100%;
+    color: black;
+	background-color: white;
+	position: fixed;
+}

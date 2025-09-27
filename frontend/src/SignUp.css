@@ -2,9 +2,9 @@
   width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #dbdbdb;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -14,6 +14,7 @@
 
 .signup-title {
   margin-bottom: 20px;
+  color: black;
 }
 
 .signup-form {
